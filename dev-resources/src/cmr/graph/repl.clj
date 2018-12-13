@@ -65,15 +65,5 @@
   (println (slurp (io/resource "text/banner.txt")))
   :ok)
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;   Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;; Demo functions
-(def get-movie #(movie-demo/get-movie (neo4j/get-conn (system)) %))
-(def search-movie #(movie-demo/search (neo4j/get-conn (system)) %))
-(def get-movie-graph #(movie-demo/get-graph (neo4j/get-conn (system)) %))
-
 ;;; Health functions
 (def current-health #(health/components-ok? (system)))
